@@ -1,0 +1,14 @@
+﻿<Window x:Class="Scoala.Views.AdminStudents.StudentsOrgClassesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views.AdminStudents"
+        mc:Ignorable="d"
+        Title="Studenti organizati pe clase" Background="Beige" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lista" HorizontalAlignment="Left" Height="320" Margin="47,67,0,0" VerticalAlignment="Top" Width="704"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Margin="332,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="192" Text="Studenti"/>
+
+    </Grid>
+</Window>

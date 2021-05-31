@@ -1,0 +1,15 @@
+﻿<Window x:Class="Scoala.Views.AdminTeachers.TeachersToClassesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views.AdminTeachers"
+        mc:Ignorable="d"
+        Title="TeachersToClassesView" Background="Black" Height="500" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="169,44,0,0" TextWrapping="Wrap" Text="Lista profesori - materie - clase" FontSize="30" FontWeight="Bold" Foreground="AliceBlue" VerticalAlignment="Top" Height="41" Width="454"/>
+        <ListBox x:Name="listaProfesoriClase" HorizontalAlignment="Left" Height="265" Margin="169,90,0,0" VerticalAlignment="Top" Width="454"/>
+        <Button x:Name="btn_elimina" Content="Elimina" FontSize="20" HorizontalAlignment="Left" Margin="288,383,0,0" VerticalAlignment="Top" Width="212" Height="46" Click="btn_elimina_Click"/>
+
+    </Grid>
+</Window>

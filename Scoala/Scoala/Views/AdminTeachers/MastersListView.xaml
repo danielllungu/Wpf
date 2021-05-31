@@ -1,0 +1,14 @@
+﻿<Window x:Class="Scoala.Views.AdminTeachers.MastersListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views.AdminTeachers"
+        mc:Ignorable="d"
+        Title="Lista diriginti View" Background="Black" Height="500" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="309,44,0,0" TextWrapping="Wrap" Text="Lista diriginti" FontSize="30" FontWeight="Bold" Foreground="AliceBlue" VerticalAlignment="Top" Height="41" Width="289"/>
+        <ListBox x:Name="listaDiriginti" HorizontalAlignment="Left" Height="265" Margin="169,90,0,0" VerticalAlignment="Top" Width="454"/>
+        <Button x:Name="btn_elimina" FontSize="20" Content="Elimina" HorizontalAlignment="Left" Margin="339,396,0,0" VerticalAlignment="Top" Width="139" Height="40" Click="btn_elimina_Click"/>
+    </Grid>
+</Window>

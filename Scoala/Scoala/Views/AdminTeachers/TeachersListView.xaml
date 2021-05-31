@@ -1,0 +1,14 @@
+﻿<Window x:Class="Scoala.Views.AdminTeachers.TeachersListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views.AdminTeachers"
+        mc:Ignorable="d"
+        Title="Lista profesori View" Background="Black" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="285,44,0,0" TextWrapping="Wrap" Text="Lista profesori" FontSize="30" FontWeight="Bold" Foreground="AliceBlue" VerticalAlignment="Top" Height="41" Width="289"/>
+        <ListBox x:Name="listaProfesori" HorizontalAlignment="Left" Height="299" Margin="169,90,0,0" VerticalAlignment="Top" Width="468"/>
+        
+    </Grid>
+</Window>

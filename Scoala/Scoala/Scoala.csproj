@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3687FD85-7029-4F50-94A6-3AB7A69E4589}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Scoala</RootNamespace>
+    <AssemblyName>Scoala</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\BussinessLogic\AddStudentBL.cs" />
+    <Compile Include="Models\BussinessLogic\AddStudentLDBL.cs" />
+    <Compile Include="Models\BussinessLogic\AddTeacherLD.cs" />
+    <Compile Include="Models\BussinessLogic\ClassesBL.cs" />
+    <Compile Include="Models\BussinessLogic\ClassesToStudentsBL.cs" />
+    <Compile Include="Models\BussinessLogic\GetAddedStudentBL.cs" />
+    <Compile Include="Models\BussinessLogic\GetAddedTeacherBL.cs" />
+    <Compile Include="Models\BussinessLogic\GetLastGivenGrade.cs" />
+    <Compile Include="Models\BussinessLogic\HelpStudentLoggedInBL.cs" />
+    <Compile Include="Models\BussinessLogic\HelpTeacherLoggedInBL.cs" />
+    <Compile Include="Models\BussinessLogic\TeacherToSubjectBL.cs" />
+    <Compile Include="Models\DataAccess\AbsenceDAL.cs" />
+    <Compile Include="Models\DataAccess\ClassDAL.cs" />
+    <Compile Include="Models\DataAccess\DocumentsDAL.cs" />
+    <Compile Include="Models\DataAccess\GradesDAL.cs" />
+    <Compile Include="Models\DataAccess\MastersDAL.cs" />
+    <Compile Include="Models\DataAccess\SubjectsDAL.cs" />
+    <Compile Include="Models\DataAccess\TeachersToSubjectsToClassDAL.cs" />
+    <Compile Include="Models\DataAccess\TotalListStudentsDAL.cs" />
+    <Compile Include="Models\EntityLayer\AbsenceStudent.cs" />
+    <Compile Include="Models\EntityLayer\AbsenceStudentLST.cs" />
+    <Compile Include="Models\EntityLayer\Class.cs" />
+    <Compile Include="Models\EntityLayer\ClassesToStudentsLST.cs" />
+    <Compile Include="Models\EntityLayer\ClassToStudent.cs" />
+    <Compile Include="Models\EntityLayer\Document.cs" />
+    <Compile Include="Models\EntityLayer\DocumentClass.cs" />
+    <Compile Include="Models\EntityLayer\Grade.cs" />
+    <Compile Include="Models\EntityLayer\GradeStudent.cs" />
+    <Compile Include="Models\EntityLayer\GradeStudentLST.cs" />
+    <Compile Include="Models\EntityLayer\MastersToClass.cs" />
+    <Compile Include="Models\EntityLayer\MasterToClass.cs" />
+    <Compile Include="Models\EntityLayer\StudentsToGradesLST.cs" />
+    <Compile Include="Models\EntityLayer\StudentToClass.cs" />
+    <Compile Include="Models\EntityLayer\StudentToGrade.cs" />
+    <Compile Include="Models\EntityLayer\Subject.cs" />
+    <Compile Include="Models\EntityLayer\TeachersToClassesLST.cs" />
+    <Compile Include="Models\EntityLayer\TeacherToSubject.cs" />
+    <Compile Include="Models\EntityLayer\TeacherToSubjectLST.cs" />
+    <Compile Include="Models\EntityLayer\TeacherToSubjectToClass.cs" />
+    <Compile Include="Models\Lists\StudentsList.cs" />
+    <Compile Include="Models\Lists\StudentsListOrgClasses.cs" />
+    <Compile Include="ViewModel\Absences\DeleteAbsenceVM.cs" />
+    <Compile Include="ViewModel\Absences\GetAbsencesOfThisStudent.cs" />
+    <Compile Include="ViewModel\Absences\GetAbsenceStudentLSTVM.cs" />
+    <Compile Include="ViewModel\Absences\InsertAbsence.cs" />
+    <Compile Include="ViewModel\Classes\AllClasses.cs" />
+    <Compile Include="ViewModel\Classes\DeleteClassVM.cs" />
+    <Compile Include="ViewModel\Classes\GetClassesFromThisTeacherSubjectVM.cs" />
+    <Compile Include="ViewModel\Classes\GetClassOfThisStudentVM.cs" />
+    <Compile Include="ViewModel\Classes\InsertClassVM.cs" />
+    <Compile Include="ViewModel\Grades\DeleteGradeStudentVM.cs" />
+    <Compile Include="ViewModel\Grades\GetAllstudentsToGradesVM.cs" />
+    <Compile Include="ViewModel\Grades\GetGradesOfThisStudentToSubjectVM.cs" />
+    <Compile Include="ViewModel\Grades\GetGradeStudentLSTVM.cs" />
+    <Compile Include="ViewModel\Grades\GradesOfThisStudent.cs" />
+    <Compile Include="ViewModel\Grades\InsertGrade.cs" />
+    <Compile Include="ViewModel\Grades\InsertGradeToStudent.cs" />
+    <Compile Include="ViewModel\Students\AddStudentVM.cs" />
+    <Compile Include="ViewModel\Students\DeleteStudentFromSchoolVM.cs" />
+    <Compile Include="ViewModel\Students\GetStudentsFromThisClassVM.cs" />
+    <Compile Include="ViewModel\Students\GetStudentsVM.cs" />
+    <Compile Include="ViewModel\Students\StudentsListVM.cs" />
+    <Compile Include="ViewModel\Students\UpdateStudentNameVM.cs" />
+    <Compile Include="ViewModel\Students\UpdateStudentToClassVM.cs" />
+    <Compile Include="ViewModel\Subjects\DeleteSubjectVM.cs" />
+    <Compile Include="ViewModel\Subjects\GetAllSubjectsVM.cs" />
+    <Compile Include="ViewModel\Subjects\GetSubjectsFromThisTeacher.cs" />
+    <Compile Include="ViewModel\Subjects\GetSubjectsOfThisClassVM.cs" />
+    <Compile Include="ViewModel\Subjects\InsertSubjectVM.cs" />
+    <Compile Include="ViewModel\Teachers\AddNewTeacher.cs" />
+    <Compile Include="ViewModel\Teachers\DeleteAndAddMasterToClass.cs" />
+    <Compile Include="ViewModel\Teachers\DeleteMasterVM.cs" />
+    <Compile Include="ViewModel\Teachers\DeleteTeacherSubjectToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\DeleteTeacherToSubjectVM.cs" />
+    <Compile Include="ViewModel\Teachers\DeleteTeacherVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetAllMastersToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetAllTeachersToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetAllTeachersVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetAllTeacherToSubjectVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetTeacherToSubjectsVM.cs" />
+    <Compile Include="ViewModel\Teachers\GetThisMastersClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\InsertTeacherSubjectToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\InsertTeacherToSubject.cs" />
+    <Compile Include="ViewModel\Teachers\SetMasterToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\UpdateMasterToClassVM.cs" />
+    <Compile Include="ViewModel\Teachers\UpdateTeacherVM.cs" />
+    <Compile Include="ViewModel\Teachers\VerifyMasterVM.cs" />
+    <Compile Include="Views\AdminClasses\AddClassView.xaml.cs">
+      <DependentUpon>AddClassView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminClasses\DeleteClassView.xaml.cs">
+      <DependentUpon>DeleteClassView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\AddStudent.xaml.cs">
+      <DependentUpon>AddStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\DeleteStudent.xaml.cs">
+      <DependentUpon>DeleteStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\DeleteStudentFromSchool.xaml.cs">
+      <DependentUpon>DeleteStudentFromSchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\ModifyStudentView.xaml.cs">
+      <DependentUpon>ModifyStudentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\StudentsOrgClassesView.xaml.cs">
+      <DependentUpon>StudentsOrgClassesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\StudentsSpecView.xaml.cs">
+      <DependentUpon>StudentsSpecView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminStudents\StudentsTotalListView.xaml.cs">
+      <DependentUpon>StudentsTotalListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminSubjects\AddSubjectView.xaml.cs">
+      <DependentUpon>AddSubjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminSubjects\SubjectsListView.xaml.cs">
+      <DependentUpon>SubjectsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\AddTeacherView.xaml.cs">
+      <DependentUpon>AddTeacherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\DeleteTeacherView.xaml.cs">
+      <DependentUpon>DeleteTeacherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\InsertTeacherToSubjectsView.xaml.cs">
+      <DependentUpon>InsertTeacherToSubjectsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\MastersListView.xaml.cs">
+      <DependentUpon>MastersListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\SetMastersToClass.xaml.cs">
+      <DependentUpon>SetMastersToClass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\SetTeachersToSubjectsToClassesView.xaml.cs">
+      <DependentUpon>SetTeachersToSubjectsToClassesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\TeachersListView.xaml.cs">
+      <DependentUpon>TeachersListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\TeachersToClassesView.xaml.cs">
+      <DependentUpon>TeachersToClassesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\TeacherToSubjectView.xaml.cs">
+      <DependentUpon>TeacherToSubjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminTeachers\UpdateTeacherView.xaml.cs">
+      <DependentUpon>UpdateTeacherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentAbsences\MyAbsences.xaml.cs">
+      <DependentUpon>MyAbsences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentGrades\MyGradesView.xaml.cs">
+      <DependentUpon>MyGradesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentView.xaml.cs">
+      <DependentUpon>StudentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherAbsences\AbsencesView.xaml.cs">
+      <DependentUpon>AbsencesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherGrades\AddGradeView.xaml.cs">
+      <DependentUpon>AddGradeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherMaster\MasterOptionsView.xaml.cs">
+      <DependentUpon>MasterOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeacherView.xaml.cs">
+      <DependentUpon>TeacherView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AdminClasses\AddClassView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminClasses\DeleteClassView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\AddStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\DeleteStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\DeleteStudentFromSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\ModifyStudentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\StudentsOrgClassesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminStudents\StudentsSpecView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminSubjects\AddSubjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminSubjects\SubjectsListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\AddTeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\DeleteTeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\InsertTeacherToSubjectsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\MastersListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\SetMastersToClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\SetTeachersToSubjectsToClassesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\TeachersListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\TeachersToClassesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\TeacherToSubjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminTeachers\UpdateTeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\EntityLayer\Admin.cs" />
+    <Compile Include="Models\BussinessLogic\Logins.cs" />
+    <Compile Include="Models\DataAccess\AdminLDDAL.cs" />
+    <Compile Include="Models\DataAccess\StudentLDDAL.cs" />
+    <Compile Include="Models\DataAccess\TeacherLDDAL.cs" />
+    <Compile Include="Models\LoginDetails\AdminLD.cs" />
+    <Compile Include="Models\LoginDetails\StudentLD.cs" />
+    <Compile Include="Models\LoginDetails\TeacherLD.cs" />
+    <Compile Include="Models\EntityLayer\Student.cs" />
+    <Compile Include="Models\DataAccess\DALHelper.cs" />
+    <Compile Include="Models\EntityLayer\Teacher.cs" />
+    <Compile Include="Views\AdminView.xaml.cs">
+      <DependentUpon>AdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AdminStudents\StudentsTotalListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentAbsences\MyAbsences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentGrades\MyGradesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherAbsences\AbsencesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherGrades\AddGradeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherMaster\MasterOptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\TeacherDocuments\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

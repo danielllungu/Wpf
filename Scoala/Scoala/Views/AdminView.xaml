@@ -1,0 +1,45 @@
+﻿<Window x:Class="Scoala.Views.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views"
+        mc:Ignorable="d"
+        Title="AdminView" Background="Black" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Foreground="Beige" TextWrapping="Wrap" Text="Sunteti logat ca administrator." VerticalAlignment="Top" Margin="29,24,0,0" Height="48" Width="516"/>
+        <Button x:Name="btn_studenti" Content="Studenti" FontSize="40" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,178,0,0" VerticalAlignment="Top" Width="327" Height="90" Click="btn_studenti_Click"/>
+        <Button x:Name="btn_profesori" Content="Profesori" FontSize="40" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="414,178,0,0" VerticalAlignment="Top" Width="327" Height="90" Click="btn_profesori_Click"/>
+        <Button x:Name="btn_materii" Content="Materii" FontSize="40" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="240,286,0,0" VerticalAlignment="Top" Width="327" Height="90" Click="btn_materii_Click"/>
+        <Button x:Name="btn_lista_studenti" Content="Lista studenti (totala)" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_studenti_Click"/>
+        <Button x:Name="btn_lista_studenti_clase" Content="Lista studenti (org. pe clase)" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_studenti_clase_Click"/>
+        <Button x:Name="btn_lista_studenti_spec" Content="Lista studenti (org. pe spec.)" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_studenti_spec_Click"/>
+        <Button x:Name="btn_adauga_student" Content="Adauga student" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_adauga_student_Click"/>
+        <Button x:Name="btn_elimina_student" Content="Elimina student" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_elimina_student_Click"/>
+        <Button x:Name="btn_Back" Content="Home" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="LightGreen" HorizontalAlignment="Left" Margin="29,350,0,0" VerticalAlignment="Top" Width="171" Height="34" Click="btn_Back_Click"/>
+        <Button x:Name="btn_elimina_clasa" Content="Elimina din clasa" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_elimina_clasa_Click"/>
+        <Button x:Name="btn_elimina_scoala" Content="Elimina din scoala" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_elimina_scoala_Click"/>
+        <Button x:Name="btn_lista_profesori" Content="Lista profesori" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_profesori_Click"/>
+        <Button x:Name="btn_adauga_profesor" Content="Adauga profesor" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_adauga_profesor_Click"/>
+        <Button x:Name="btn_elimina_profesor" Content="Elimina profesor" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_elimina_profesor_Click"/>
+        <Button x:Name="btn_lista_materii" Content="Lista materii" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_materii_Click"/>
+        <Button x:Name="btn_adauga_materie" Content="Adauga materie" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_adauga_materie_Click"/>
+        <Button x:Name="btn_Clase" Content="Clase" FontSize="40" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="240,69,0,0" VerticalAlignment="Top" Width="327" Height="90" Click="btn_Clase_Click"/>
+        <Button x:Name="btn_adauga_clasa" Content="Adauga clasa" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_adauga_clasa_Click"/>
+        <Button x:Name="btn_sterge_clasa" Content="Sterge clasa" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_sterge_clasa_Click"/>
+        <Button x:Name="btn_modifica_student" Content="Modifica student" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_modifica_student_Click"/>
+        <Button x:Name="btn_modifica_profesor" Content="Modifica profesor" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_modifica_profesor_Click"/>
+        <Button x:Name="btn_cuplaj" Content="Cuplaj" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="253,246,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_cuplaj_Click"/>
+        <Button x:Name="btn_lista_diriginti" Content="Lista diriginti" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_diriginti_Click"/>
+        <Button x:Name="btn_lista_profesori_clase" Content="Lista profesori-clase" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,159,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_profesori_clase_Click"/>
+        <Button x:Name="btn_seteaza_dirigiti" Content="Modifica diriginti-clase" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_seteaza_dirigiti_Click"/>
+        <Button x:Name="btn_seteaza_profesori_clase" Content="Modifica profesori-clase" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,77,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_seteaza_profesori_clase_Click"/>
+        <Button x:Name="btn_lista_profesori_materii" Content="Lista profesori-materii" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="66,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_lista_profesori_materii_Click"/>
+        <Button x:Name="btn_seteaza_profesori_materii" Content="Modifica profesori-materii" FontSize="20" FontWeight="Bold" Background="DarkSlateBlue" Foreground="Azure" HorizontalAlignment="Left" Margin="449,236,0,0" VerticalAlignment="Top" Width="292" Height="82" Click="btn_seteaza_profesori_materii_Click"/>
+        <Button x:Name="btn_LogOut" Content="LOGOUT" FontSize="16" FontWeight="Bold" Foreground="LightGreen" Background="DarkSlateBlue" HorizontalAlignment="Left" Margin="639,10,0,0" VerticalAlignment="Top" Width="116" Height="30" Click="btn_LogOut_Click"/>
+
+
+
+
+    </Grid>
+</Window>

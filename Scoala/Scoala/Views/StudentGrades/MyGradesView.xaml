@@ -1,0 +1,19 @@
+﻿<Window x:Class="Scoala.Views.StudentGrades.MyGradesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scoala.Views.StudentGrades"
+        mc:Ignorable="d"
+        Title="MyGradesView" Background="Black" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="materii" HorizontalAlignment="Left" Height="221" Margin="93,97,0,0" VerticalAlignment="Top" Width="268"/>
+        <ListBox x:Name="note" HorizontalAlignment="Left" Height="221" Margin="443,97,0,0" VerticalAlignment="Top" Width="316"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="25" TextAlignment="Center" Foreground="AliceBlue" Margin="93,50,0,0" TextWrapping="Wrap" Text="Materie" FontWeight="Bold" VerticalAlignment="Top" Height="34" Width="268"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="25" TextAlignment="Center" Foreground="AliceBlue" Margin="497,50,0,0" TextWrapping="Wrap" Text="Note" FontWeight="Bold" VerticalAlignment="Top" Height="34" Width="200"/>
+        <Button x:Name="forward_materii_note" Content=">>" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Top" Width="72" Margin="366,195,0,0" Height="39" Click="forward_materii_note_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="497,345,0,0" TextWrapping="Wrap" FontSize="25" Foreground="AliceBlue" Text="Medie = " VerticalAlignment="Top" Height="33" Width="106"/>
+        <TextBlock x:Name="medie" HorizontalAlignment="Left" Margin="608,345,0,0" TextWrapping="Wrap" FontSize="25" Foreground="AliceBlue" Text="" VerticalAlignment="Top" Height="33" Width="111"/>
+
+    </Grid>
+</Window>
